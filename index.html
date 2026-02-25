@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebMotic | Agence Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1 class="logo">WebMotic</h1>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        ☰
+      </div>
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Je crée des sites web modernes et efficaces</h2>
+    <p>Des solutions simples et rapides pour développer votre présence en ligne.</p>
+    <a href="#contact" class="btn">Me contacter</a>
+  </section>
+
+  <section id="services" class="section">
+    <h3>Services</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Site 1 page</h4>
+        <p>Idéal pour présenter une activité simplement.</p>
+      </div>
+      <div class="card">
+        <h4>Site 3 pages</h4>
+        <p>Présentation complète avec services détaillés.</p>
+      </div>
+      <div class="card">
+        <h4>Maintenance</h4>
+        <p>Modification et mise à jour rapide.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section dark">
+    <h3>Portfolio</h3>
+    <p>Des exemples de sites bientôt disponibles.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <form id="contact-form">
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+      <p id="form-message"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 WebMotic - Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
