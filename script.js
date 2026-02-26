@@ -6,15 +6,36 @@ burger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Simulation envoi formulaire
+// Envoi réel vers Formspree
 const form = document.getElementById("contact-form");
-const message = document.getElementById("form-message");
+const status = document.getElementById("form-status");
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  message.textContent = "Message envoyé avec succès !";
-  message.style.color = "green";
-  form.reset();
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (response.ok) {
+      status.textContent = "Message envoyé avec succès ✔";
+      status.style.color = "green";
+      form.reset();
+    } else {
+      status.textContent = "Erreur lors de l'envoi.";
+      status.style.color = "red";
+    }
+  } catch (error) {
+    status.textContent = "Problème réseau.";
+    status.style.color = "red";
+  }
 });
 
 // ===== DARK MODE =====
